@@ -7,7 +7,7 @@ Call JavaScript functions from DotVVM with JS Directive.
 
 ## Tutorial
 
-Coming soon!
+[https://dev.to/esdanielgomez/calling-javascript-functions-from-dotvvm-with-js-directive-1ci0](https://dev.to/esdanielgomez/calling-javascript-functions-from-dotvvm-with-js-directive-1ci0)
 
 ## Autor
 
