@@ -1,0 +1,34 @@
+﻿@viewModel JSDirective.ViewModels.DefaultViewModel, JSDirective
+@masterPage Views/MasterPage.dotmaster
+@js module
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <div class="content">
+
+        <img src="/Resources/Images/tree.svg" class="content__background-image content__background-image--left" />
+
+        <a href="https://www.dotvvm.com/" target="_blank">
+            <img src="/Resources/Images/text.svg" class="content__image" />
+        </a>
+
+        <div class="content__text">
+            <h1>JS Directive Demo</h1>
+            <h3>Add two numbers</h3>
+
+            <ul class="content-page">
+                <li><b>Number1: </b></li>
+                <li><dot:TextBox Text="{value: Number1}" Type="Number" /></li>
+                <li><b>Number2: </b></li>
+                <li><dot:TextBox Text="{value: Number2}" Type="Number" /></li>
+            </ul>
+
+            <dot:Button Text="Calculate"
+                        Click="{staticCommand:_js.Invoke("operation", Number1, Number2);}" />
+
+            <dot:NamedCommand Name="ResultOperation" Command="{staticCommand: (int id) => _root.Result = id}" />
+            <h3>Result: <b>{{value: Result}}</b></h3>
+        </div>
+
+        <img src="/Resources/Images/tree.svg" class="content__background-image content__background-image content__background-image--right" />
+    </div>
+</dot:Content>
